@@ -17,7 +17,7 @@ import { Component, Vue, Provide } from 'vue-property-decorator'
 @Component({})
 export default class Login extends Vue {
   private loading: boolean = false;
-  private form: object = {
+  private form: any = {
     username: '',
     password: ''
   };
@@ -35,6 +35,8 @@ export default class Login extends Vue {
     el.validate((valid: boolean) => {
       if (valid) {
         // 验证通过
+        localStorage.setItem('username', this.form.username)
+        this.$router.push('/home')
       } else {
         // 验证失败
       }
