@@ -31,16 +31,14 @@ export default class Login extends Vue {
   };
   private submitForm (ref: string): void {
     console.log(this.form)
-    this.$refs[ref].validate( (valid: boolean) => {
-      if(valid){
+    let el: any = this.$refs[ref]
+    el.validate((valid: boolean) => {
+      if (valid) {
         // 验证通过
-
-      }else{
+      } else {
         // 验证失败
-        
       }
     })
-    
   }
 }
 </script>
