@@ -13,5 +13,11 @@ import HelloWorld from '@/components/HelloWorld.vue' // @ is an alias to /src
     HelloWorld
   }
 })
-export default class Home extends Vue {}
+export default class Home extends Vue {
+  private mounted (): void {
+    if (!localStorage.getItem('username')) {
+      this.$router.push('/login')
+    }
+  }
+}
 </script>
