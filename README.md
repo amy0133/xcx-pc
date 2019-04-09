@@ -1,29 +1,21 @@
-# xcx-shop-pc
+# pc商城管理
 
-## Project setup
+## 安装启动
+* 1、安装依赖包
 ```
 npm install
 ```
 
-### Compiles and hot-reloads for development
+* 2、启动开发环境
 ```
-npm run serve
+npm run dev
 ```
 
-### Compiles and minifies for production
+* 3、编译压缩
 ```
 npm run build
 ```
-
-### Run your tests
-```
-npm run test
-```
-
-### Lints and fixes files
+* 4、提示、修复文件
 ```
 npm run lint
 ```
-
-### Customize configuration
-See [Configuration Reference](https://cli.vuejs.org/config/).
