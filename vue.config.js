@@ -6,7 +6,7 @@ module.exports = {
     // 静态资源目录
     assetsDir: 'static',
     // eslint-loader 是否保存时检查
-    lintOnSave: true,
+    lintOnSave: false,
     // webpack配置：参考：https://cli.vuejs.org/zh/config/#chainwebpack
     // 链式
     chainWebpack: () => {
@@ -56,15 +56,15 @@ module.exports = {
         https: false,
         hotOnly: false, 
         // 设置代理
-        // proxy: {
-        //  '/api': {
-        //      target: 'http://baidu.com:8080', //真实请求的目标地址
-        //      changeOrigin: true,
-        //      pathRewrite: {
-        //          '^/api': ''
-        //      }
-        //  }
-        // },
+        proxy: {
+         '/api': {
+             target: 'http://localhost:3000', //真实请求的目标地址
+             changeOrigin: true,
+             pathRewrite: {
+                 '^/api': ''
+             }
+         }
+        },
         before: app => {
         }
     },

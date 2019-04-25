@@ -24,9 +24,9 @@ export default new Router({
       component: Login
     },
     {
-      path: '/about',
-      name: 'about',
-      component: () => import(/* webpackChunkName: "about" */ './views/About.vue')
+      path: '/category',
+      name: '产品类型',
+      component: () => import(/* webpackChunkName: "category" */ './views/Category.vue')
     }
   ]
 })
