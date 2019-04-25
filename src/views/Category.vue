@@ -7,11 +7,11 @@
       el-table-column(prop="desc", label="描述")
       el-table-column(label="操作")
         template(slot-scope="scope")
-          el-button(size="small") 编辑{{scope.id}}
+          el-button(size="small") 编辑{{scope.row.id}}
 </template>
 
 <script lang="ts">
-  import { Component, Vue, Provide } from 'vue-property-decorator'
+  import { Component, Vue } from 'vue-property-decorator'
 
   @Component({})
   export default class Category extends Vue {

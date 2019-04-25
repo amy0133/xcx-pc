@@ -25,8 +25,13 @@ export default new Router({
     },
     {
       path: '/category',
-      name: '产品类型',
+      name: '产品类型管理',
       component: () => import(/* webpackChunkName: "category" */ './views/Category.vue')
+    },
+    {
+      path: '/product',
+      name: '产品管理',
+      component: () => import(/* webpackChunkName: "product" */ './views/Product.vue')
     }
   ]
 })
